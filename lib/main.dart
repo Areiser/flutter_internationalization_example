@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_internationalization_example/my_localizations.dart';
 
 void main() {
   runApp(new MyApp());
@@ -13,6 +14,14 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: new MyHomePage(title: 'Flutter Localization Demo'),
+      localizationsDelegates: <LocalizationsDelegate>[
+        new MyLocalizationsDelegate(),
+      ],
+      supportedLocales: <Locale>[
+        // US English - remove this to see french text or vice versa
+        const Locale('en', 'US'),
+        const Locale('fr', 'CA'), // Candian French
+      ],
     );
   }
 }
