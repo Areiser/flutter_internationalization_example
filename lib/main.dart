@@ -40,7 +40,7 @@ class MyHomePage extends StatelessWidget {
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            new Text('Should display localized version of hello world'),
+            new Text(MyLocalizations.of(context).helloWorld),
           ],
         ),
       ),
