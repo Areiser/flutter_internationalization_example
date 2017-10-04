@@ -32,4 +32,14 @@ class MyLocalizations {
 // ... more methods like get helloWorld
 }
 
+class MyLocalizationsDelegate extends LocalizationsDelegate<MyLocalizations> {
+  @override
+  Future<MyLocalizations> load(Locale locale) => MyLocalizations.load(locale);
+
+  @override
+  bool shouldReload(MyLocalizationsDelegate old) => false;
+}
+
+
+
 
